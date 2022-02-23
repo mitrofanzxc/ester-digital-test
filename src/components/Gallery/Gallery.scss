@@ -4,13 +4,23 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: $base*12 0;
+  gap: $base*15 0;
   margin-top: $base*20;
+
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: space-evenly;
+    gap: $base*11 0;
+    margin-top: $base*15;
+  }
 
   .gallery__wrapper__item {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 31%;
+
+    @media (max-width: $breakpoint-lg-min) {
+      width: 34%;
+    }
 
     .gallery__wrapper__item__img {
       width: 100%;

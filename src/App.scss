@@ -51,19 +51,19 @@ body {
   margin: 0 auto;
   padding: $base*28 $base*48;
 
-  @media (max-width: $breakpoint-lg-min) {
-    padding: 0 $base*8;
+  @media (max-width: $breakpoint-xl-min) {
+    padding: $base*14 $base*24;
   }
 
-  @media (max-width: $breakpoint-xs-min) {
-    padding: 0 $base*4;
+  @media (max-width: $breakpoint-lg-min) {
+    padding: $base*13 $base*4;
   }
 }
 
 .h1 {
   @include forum;
   position: relative;
-  font-size: $fs-xl;
+  font-size: $fs-xxl;
   font-weight: $fw-regular;
   line-height: $base*18;
   letter-spacing: $base;
@@ -80,6 +80,14 @@ body {
     width: 100%;
     height: 3px;
     background-color: $color-dark-red;
+
+    @media (max-width: $breakpoint-lg-min) {
+      bottom: -$base*3;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $fs-xl;
   }
 }
 
@@ -100,9 +108,19 @@ body {
     position: absolute;
     bottom: -$base*2;
     left: 0;
-    width: 75%;
+    width: 68%;
     height: 2px;
     background-color: $color-dark-red;
+
+    @media (max-width: $breakpoint-lg-min) {
+      width: 46%;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $fs-m;
+    letter-spacing: 3px;
+    margin: $base*4 0 0 0;
   }
 }
 
@@ -114,6 +132,10 @@ body {
   margin: $base*4 0 0 0;
   padding: 0;
   color: $color-bg-dark;
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $base*4;
+  }
 }
 
 .h4 {
@@ -124,6 +146,10 @@ body {
   margin: $base*2 0 0 0;
   padding: 0;
   color: $color-bg-dark;
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: 16px;
+  }
 }
 
 .link {
