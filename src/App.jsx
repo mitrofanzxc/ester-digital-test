@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Gallery } from "./components/Gallery/Gallery";
+import { VirtualTour } from "./pages/VirtualTour";
 
 import "./App.scss";
 
 function App() {
   return (
     <div>
-      <Gallery />
+      <VirtualTour />
     </div>
   );
 }
