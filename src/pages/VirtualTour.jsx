@@ -1,0 +1,1 @@
+import { GalleryImg } from "../shared/GalleryImg";
