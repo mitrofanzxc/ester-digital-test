@@ -1,1 +1,20 @@
 @import "../../scss/Variables.scss";
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $base*12;
+  margin-top: $base*20;
+
+  .gallery__wrapper__item {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    .gallery__wrapper__item__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

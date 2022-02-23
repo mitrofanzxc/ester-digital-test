@@ -4,6 +4,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+@mixin forum {
+  font-family: 'Forum', cursive;
+}
+
 @mixin flexSpaceAround {
   display: flex;
   align-items: center;
