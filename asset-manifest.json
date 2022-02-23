@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/test-task/static/css/main.4e466e0c.css",
+    "main.js": "/test-task/static/js/main.c4d5fa4b.js",
+    "static/js/787.e8769ff5.chunk.js": "/test-task/static/js/787.e8769ff5.chunk.js",
+    "static/media/museum__tour__1.jpg": "/test-task/static/media/museum__tour__1.14d659202fb0b95dcc32.jpg",
+    "static/media/museum__tour__2.jpg": "/test-task/static/media/museum__tour__2.cbc3f2fc4ab1623fc8d2.jpg",
+    "static/media/museum__tour__6.jpg": "/test-task/static/media/museum__tour__6.086115dbfb4c3249ef88.jpg",
+    "static/media/museum__tour__3.jpg": "/test-task/static/media/museum__tour__3.dcb21b7826e052ee06fa.jpg",
+    "static/media/museum__tour__5.jpg": "/test-task/static/media/museum__tour__5.dfaa6cfcd31bac1a7b75.jpg",
+    "static/media/museum__tour__4.jpg": "/test-task/static/media/museum__tour__4.408c22c3b8c8d08a0505.jpg",
+    "static/media/Roboto-Regular.woff": "/test-task/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
+    "static/media/Forum.woff": "/test-task/static/media/Forum.ab9479d8db2be8d7ee3a.woff",
+    "static/media/Roboto-Thin.woff": "/test-task/static/media/Roboto-Thin.674b1d2bd9d781457c17.woff",
+    "static/media/Roboto-Regular.woff2": "/test-task/static/media/Roboto-Regular.a25806274237d06e00a6.woff2",
+    "static/media/Roboto-Thin.woff2": "/test-task/static/media/Roboto-Thin.0b33782009e32497dba2.woff2",
+    "static/media/Forum.woff2": "/test-task/static/media/Forum.e807e701a8a0c5e8aa78.woff2",
+    "index.html": "/test-task/index.html",
+    "main.4e466e0c.css.map": "/test-task/static/css/main.4e466e0c.css.map",
+    "main.c4d5fa4b.js.map": "/test-task/static/js/main.c4d5fa4b.js.map",
+    "787.e8769ff5.chunk.js.map": "/test-task/static/js/787.e8769ff5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e466e0c.css",
+    "static/js/main.c4d5fa4b.js"
+  ]
+}
