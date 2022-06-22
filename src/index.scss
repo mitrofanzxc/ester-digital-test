@@ -1,22 +1,28 @@
-@import "./scss/Variables.scss";
+@import './sass/Constants.scss';
 
 // === FONTS ===
 
-@mixin font ($font_name, $file_name, $weight, $style) {
+@mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("./assets/fonts/#{$file_name}.woff") format("woff"), url("./assets/fonts/#{$file_name}.woff2") format("woff2");
+    src: url('./fonts/#{$file_name}.woff') format('woff'),
+      url('./fonts/#{$file_name}.woff2') format('woff2');
     font-weight: #{$weight};
     font-style: #{$style};
   }
 }
 
-@import "fonts";
+@import './sass/Fonts.scss';
 
 // === / FONTS ===
 
-// === COMMON ===
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 html {
   scroll-behavior: smooth;
@@ -26,13 +32,13 @@ body {
   @include roboto;
   background-color: $color-white;
   margin: 0;
-  
+
   &::-webkit-scrollbar {
     width: $base;
   }
 
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 $base rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 $base rgba(0, 0, 0, 0.3);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -41,30 +47,30 @@ body {
 }
 
 .outer__container {
-  max-width: $base*384;
+  max-width: $base * 384;
   margin: 0 auto;
   padding: 0;
 }
 
 .inner__container {
-  max-width: $base*288;
+  max-width: $base * 288;
   margin: 0 auto;
-  padding: $base*28 $base*48;
+  padding: $base * 28 $base * 48;
 
   @media (max-width: $breakpoint-xl-min) {
-    padding: $base*14 $base*24;
+    padding: $base * 14 $base * 24;
   }
 
   @media (max-width: $breakpoint-lg-min) {
-    padding: $base*13 $base*4;
+    padding: $base * 13 $base * 4;
   }
 
   @media (max-width: $breakpoint-md-min) {
-    padding: $base*12 $base*4;
+    padding: $base * 12 $base * 4;
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    padding: $base*8 $base*4;
+    padding: $base * 8 $base * 4;
   }
 }
 
@@ -73,7 +79,7 @@ body {
   position: relative;
   font-size: $fs-xxl;
   font-weight: $fw-regular;
-  line-height: $base*18;
+  line-height: $base * 18;
   letter-spacing: $base;
   margin: 0;
   padding: 0;
@@ -83,22 +89,22 @@ body {
   &::after {
     content: '';
     position: absolute;
-    bottom: -$base*5;
+    bottom: -$base * 5;
     left: 0;
     width: 100%;
     height: 3px;
     background-color: $color-dark-red;
 
     @media (max-width: $breakpoint-lg-min) {
-      bottom: -$base*3;
+      bottom: -$base * 3;
     }
 
     @media (max-width: $breakpoint-md-min) {
-      bottom: -$base*5;
+      bottom: -$base * 5;
     }
 
     @media (max-width: $breakpoint-xs-min) {
-      bottom: -$base*5;
+      bottom: -$base * 5;
     }
   }
 
@@ -107,13 +113,13 @@ body {
   }
 
   @media (max-width: $breakpoint-md-min) {
-    font-size: $base*8;
-    line-height: $base*12;
+    font-size: $base * 8;
+    line-height: $base * 12;
   }
 
   @media (max-width: $breakpoint-xs-min) {
     font-size: $fs-m;
-    line-height: $base*8;
+    line-height: $base * 8;
   }
 }
 
@@ -122,17 +128,17 @@ body {
   position: relative;
   font-size: $fs-l;
   font-weight: $fw-regular;
-  line-height: $base*7;
+  line-height: $base * 7;
   letter-spacing: $base;
-  margin: $base*5 0 0 0;
+  margin: $base * 5 0 0 0;
   padding: 0;
   color: $color-bg-dark;
   text-transform: uppercase;
-  
+
   &::after {
     content: '';
     position: absolute;
-    bottom: -$base*2;
+    bottom: -$base * 2;
     left: 0;
     width: 68%;
     height: 2px;
@@ -151,16 +157,16 @@ body {
   @media (max-width: $breakpoint-lg-min) {
     font-size: $fs-m;
     letter-spacing: 3px;
-    margin: $base*4 0 0 0;
+    margin: $base * 4 0 0 0;
   }
 
   @media (max-width: $breakpoint-md-min) {
     font-size: $fs-s;
-    margin: $base*4 0 0 0;
+    margin: $base * 4 0 0 0;
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    margin: $base*3 0 0 0;
+    margin: $base * 3 0 0 0;
   }
 }
 
@@ -168,23 +174,23 @@ body {
   @include roboto;
   font-size: $fs-s;
   font-weight: $fw-thin;
-  line-height: $base*5;
-  margin: $base*4 0 0 0;
+  line-height: $base * 5;
+  margin: $base * 4 0 0 0;
   padding: 0;
   color: $color-bg-dark;
 
   @media (max-width: $breakpoint-lg-min) {
-    font-size: $base*4;
+    font-size: $base * 4;
   }
 
   @media (max-width: $breakpoint-md-min) {
     font-size: $fs-xs;
-    margin: $base*3 0 0 0;
+    margin: $base * 3 0 0 0;
   }
 
   @media (max-width: $breakpoint-xs-min) {
     font-size: 16px;
-    margin: $base*2 0 0 0;
+    margin: $base * 2 0 0 0;
   }
 }
 
@@ -192,8 +198,8 @@ body {
   @include roboto;
   font-size: $fs-xs;
   font-weight: $fw-thin;
-  line-height: $base*4;
-  margin: $base*2 0 0 0;
+  line-height: $base * 4;
+  margin: $base * 2 0 0 0;
   padding: 0;
   color: $color-bg-dark;
 
@@ -207,7 +213,7 @@ body {
 
   @media (max-width: $breakpoint-xs-min) {
     font-size: 16px;
-    margin: $base*2 0 0 0;
+    margin: $base * 2 0 0 0;
   }
 }
 
@@ -215,5 +221,3 @@ body {
   text-decoration: none;
   color: $color-bg-dark;
 }
-
-// === / COMMON ===

@@ -1,7 +1,7 @@
 // Task 1
 
 const obj = {
-  value: "1",
+  value: '1',
   getSecret: function () {
     return this.value;
   },
@@ -20,9 +20,9 @@ const array = [7, 6, 15, 8];
 
 function arrSort(arr) {
   return arr
-    .map((x) => x.toString(2).split("").reverse().join(""))
+    .map((x) => x.toString(2).split('').reverse().join(''))
     .sort((a, b) => a - b)
-    .map((x) => x.split("").reverse().join(""))
+    .map((x) => x.split('').reverse().join(''))
     .map((x) => parseInt(x, 2));
 }
 
@@ -32,7 +32,7 @@ console.log(arrSort(array));
 
 const languages1 = { Java: 10, Ruby: 80, Python: 65 };
 const languages2 = { Hindi: 60, Dutch: 93, Greek: 71 };
-const languages3 = { "C++": 50, ASM: 10, Haskell: 20 };
+const languages3 = { 'C++': 50, ASM: 10, Haskell: 20 };
 
 function myLanguages(results) {
   let arr = Object.entries(results)
@@ -40,7 +40,7 @@ function myLanguages(results) {
     .sort((a, b) => b[1] - a[1]);
   let arr2 = [];
   for (let key of arr) {
-    if (typeof key[0] === "string") {
+    if (typeof key[0] === 'string') {
       arr2.push(key[0]);
     }
   }

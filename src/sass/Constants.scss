@@ -8,24 +8,6 @@
   font-family: 'Forum', cursive;
 }
 
-@mixin flexSpaceAround {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-@mixin flexSpaceBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 // === / MIXIN ===
 
 // === FUNCTIONS ===
@@ -54,21 +36,22 @@ $fs-l: rem(32px);
 $fs-xl: rem(50px);
 $fs-xxl: rem(80px);
 
-$transition: .3s;
+$transition: 0.3s;
+$transition-01: 0.1s;
+$transition-02: 0.2s;
 
-$color-white: #FFFFFF;
-$color-bg-dark: #030303;
-$color-dark-red: #710707;
-$color-font-gold: #9D8665;
+$color-white: rgba(255, 255, 255, 1);
+$color-bg-dark: rgba(3, 3, 3, 1);
+$color-dark-red: rgba(113, 7, 7, 1);
+$color-font-gold: rgba(157, 134, 101, 1);
 
 $breakpoint-xxs-min: 320px;
-$breakpoint-xs-min: 420px;
+$breakpoint-xs-min: 480px;
 $breakpoint-sm-min: 576px;
 $breakpoint-md-min: 768px;
-$breakpoint-lg-min: 1024px;
+$breakpoint-lg-min: 992px;
 $breakpoint-xl-min: 1200px;
 $breakpoint-xxl-min: 1440px;
-$breakpoint-xxxl-min: 1920px;
 
 $breakpoint-xxxs-max: $breakpoint-xxs-min - 1px;
 $breakpoint-xxs-max: $breakpoint-xs-min - 1px;
@@ -77,7 +60,5 @@ $breakpoint-sm-max: $breakpoint-md-min - 1px;
 $breakpoint-md-max: $breakpoint-lg-min - 1px;
 $breakpoint-lg-max: $breakpoint-xl-min - 1px;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
-
-$calcWidth: 100%;
 
 // === / VARIABLES ===

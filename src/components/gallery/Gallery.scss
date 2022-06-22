@@ -1,25 +1,25 @@
-@import "../../scss/Variables.scss";
+@import '../../sass/Constants.scss';
 
 .gallery__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: $base*15 0;
-  margin-top: $base*20;
+  gap: $base * 15 0;
+  margin-top: $base * 20;
 
   @media (max-width: $breakpoint-lg-min) {
     justify-content: space-evenly;
-    gap: $base*11 0;
-    margin-top: $base*15;
+    gap: $base * 11 0;
+    margin-top: $base * 15;
   }
 
   @media (max-width: $breakpoint-md-min) {
-    margin-top: $base*13;
-    gap: $base*8 0;
+    margin-top: $base * 13;
+    gap: $base * 8 0;
   }
 
   @media (max-width: $breakpoint-xs-min) {
-    margin-top: $base*13;
+    margin-top: $base * 13;
     gap: 38px 0;
   }
 
