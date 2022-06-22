@@ -1,24 +1,11 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from '../index';
-import { ILayout } from '../../shared/interface';
 
-const Layout: FC<ILayout> = ({
-  isModalOpen,
-  handleIsModalOpen,
-  useModalOpen,
-  isToastOpen,
-  handleIsToastOpen,
-}) => {
+const Layout: FC = () => {
   return (
     <>
-      <Header
-        isModalOpen={isModalOpen}
-        handleIsModalOpen={handleIsModalOpen}
-        useModalOpen={useModalOpen}
-        isToastOpen={isToastOpen}
-        handleIsToastOpen={handleIsToastOpen}
-      />
+      <Header />
       <main className="main">
         <Outlet />
       </main>

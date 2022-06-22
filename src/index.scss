@@ -17,27 +17,6 @@
 
 // === / FONTS ===
 
-body {
-  @include montserrat;
-  @include scroll;
-  position: relative;
-  width: 100%;
-  background-image: url('./images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $color-dark;
-  scroll-behavior: smooth;
-  transition: $transition-01;
-
-  @media (max-width: $breakpoint-lg-min) {
-    background-size: 150%;
-  }
-}
-
-.body__overflow {
-  overflow-y: hidden;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,90 +24,200 @@ body {
   list-style-type: none;
 }
 
-.wrapper {
-  width: 82vw;
-  max-width: $base * 314;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include roboto;
+  background-color: $color-white;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: $base;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 $base rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-font-gold;
+  }
+}
+
+.outer__container {
+  max-width: $base * 384;
   margin: 0 auto;
+  padding: 0;
+}
+
+.inner__container {
+  max-width: $base * 288;
+  margin: 0 auto;
+  padding: $base * 28 $base * 48;
+
+  @media (max-width: $breakpoint-xl-min) {
+    padding: $base * 14 $base * 24;
+  }
 
   @media (max-width: $breakpoint-lg-min) {
-    width: 97vw;
+    padding: $base * 13 $base * 4;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    padding: $base * 12 $base * 4;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    padding: $base * 8 $base * 4;
   }
 }
 
 .h1 {
-  @include montserrat;
-  font-size: $fs-xxxxl;
-  font-weight: $fw-light;
-}
-
-.h2 {
-  @include montserrat;
-  font-size: $fs-xxxl;
+  @include forum;
+  position: relative;
+  font-size: $fs-xxl;
   font-weight: $fw-regular;
-}
-
-.h3 {
-  @include montserrat;
-  font-size: $fs-m;
-  font-weight: $fw-semi-bold;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.h4 {
-  @include montserrat;
+  line-height: $base * 18;
+  letter-spacing: $base;
   margin: 0;
   padding: 0;
-  font-size: $fs-m;
-  font-weight: $fw-regular;
-  color: $color-dark-08;
-  line-height: $base * 4;
-  letter-spacing: 0.06em;
-}
+  color: $color-font-gold;
+  text-transform: uppercase;
 
-a {
-  text-decoration: none;
-}
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -$base * 5;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-dark-red;
 
-.active {
-  background-color: $color-orange;
-  transition: $transition-01;
-}
+    @media (max-width: $breakpoint-lg-min) {
+      bottom: -$base * 3;
+    }
 
-.medium {
-  font-weight: $fw-medium;
-}
+    @media (max-width: $breakpoint-md-min) {
+      bottom: -$base * 5;
+    }
 
-.semi-bold {
-  font-weight: $fw-semi-bold;
-}
+    @media (max-width: $breakpoint-xs-min) {
+      bottom: -$base * 5;
+    }
+  }
 
-.bold {
-  font-weight: $fw-bold;
-}
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $fs-xl;
+  }
 
-.dotted {
-  padding-bottom: $base;
-  font-size: $fs-xs;
-  letter-spacing: 0.04em;
-  border-bottom: 0.125rem dotted $color-green;
-  transition: $transition-02;
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $base * 8;
+    line-height: $base * 12;
+  }
 
-  &:hover {
-    transform: scale(1.1);
-    transition: $transition-02;
+  @media (max-width: $breakpoint-xs-min) {
+    font-size: $fs-m;
+    line-height: $base * 8;
   }
 }
 
-.color-green {
-  color: $color-green;
+.h2 {
+  @include forum;
+  position: relative;
+  font-size: $fs-l;
+  font-weight: $fw-regular;
+  line-height: $base * 7;
+  letter-spacing: $base;
+  margin: $base * 5 0 0 0;
+  padding: 0;
+  color: $color-bg-dark;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -$base * 2;
+    left: 0;
+    width: 68%;
+    height: 2px;
+    background-color: $color-dark-red;
+
+    @media (max-width: $breakpoint-lg-min) {
+      width: 46%;
+    }
+
+    @media (max-width: $breakpoint-md-min) {
+      width: 54%;
+      bottom: -$base;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $fs-m;
+    letter-spacing: 3px;
+    margin: $base * 4 0 0 0;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $fs-s;
+    margin: $base * 4 0 0 0;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    margin: $base * 3 0 0 0;
+  }
 }
 
-.color-orange {
-  color: $color-orange;
+.h3 {
+  @include roboto;
+  font-size: $fs-s;
+  font-weight: $fw-thin;
+  line-height: $base * 5;
+  margin: $base * 4 0 0 0;
+  padding: 0;
+  color: $color-bg-dark;
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: $base * 4;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    font-size: $fs-xs;
+    margin: $base * 3 0 0 0;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    font-size: 16px;
+    margin: $base * 2 0 0 0;
+  }
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.h4 {
+  @include roboto;
+  font-size: $fs-xs;
+  font-weight: $fw-thin;
+  line-height: $base * 4;
+  margin: $base * 2 0 0 0;
+  padding: 0;
+  color: $color-bg-dark;
+
+  @media (max-width: $breakpoint-lg-min) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint-md-min) {
+    margin: $base 0 0 0;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    font-size: 16px;
+    margin: $base * 2 0 0 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $color-bg-dark;
 }
